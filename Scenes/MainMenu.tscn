@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://cs6e2hbm3l31i"]
+[gd_scene load_steps=3 format=3 uid="uid://cs6e2hbm3l31i"]
 
 [ext_resource type="FontFile" uid="uid://ce5orwahlvceo" path="res://Fonts/MainFont.ttf" id="1_tt5f1"]
+[ext_resource type="Script" uid="uid://d2ev2yqox5ahs" path="res://Scripts/SceneSwitcher.cs" id="2_853f1"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -74,6 +75,8 @@ grow_vertical = 2
 theme_override_fonts/font = ExtResource("1_tt5f1")
 theme_override_font_sizes/font_size = 91
 text = "Singleplayer"
+script = ExtResource("2_853f1")
+ScenePath = "res://Scenes/SingleplayerMenu.tscn"
 
 [node name="MultiplayerButton" type="Button" parent="Center/Buttons"]
 layout_mode = 1
