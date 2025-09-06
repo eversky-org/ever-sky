@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://cs6e2hbm3l31i"]
+[gd_scene load_steps=5 format=3 uid="uid://cs6e2hbm3l31i"]
 
 [ext_resource type="FontFile" uid="uid://ce5orwahlvceo" path="res://Fonts/MainFont.ttf" id="1_tt5f1"]
 [ext_resource type="Script" uid="uid://d2ev2yqox5ahs" path="res://Scripts/SceneSwitcher.cs" id="2_853f1"]
+[ext_resource type="Script" uid="uid://dur42qfco1ugo" path="res://Scripts/Version.cs" id="3_8saeu"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_853f1"]
 bg_color = Color(0.051971, 0.051971, 0.0519709, 1)
@@ -99,3 +100,57 @@ theme_override_font_sizes/font_size = 71
 theme_override_styles/disabled = SubResource("StyleBoxFlat_853f1")
 disabled = true
 text = "Multiplayer"
+
+[node name="Version" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -40.0
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(0.72, 0.72)
+script = ExtResource("3_8saeu")
+
+[node name="VersionLabel" type="Label" parent="Version"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -626.0
+offset_top = -116.0
+offset_right = -10.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("1_tt5f1")
+theme_override_font_sizes/font_size = 101
+text = "Version: {Version}"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="LatestVersionLabel" type="Label" parent="Version"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -626.0
+offset_top = -253.0
+offset_right = -10.0
+offset_bottom = -137.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("1_tt5f1")
+theme_override_font_sizes/font_size = 101
+text = "Latest Version: Loading"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="HTTPRequest" type="HTTPRequest" parent="Version/LatestVersionLabel"]
+use_threads = true

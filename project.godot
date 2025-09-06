@@ -11,9 +11,14 @@ config_version=5
 [application]
 
 config/name="Ever Sky"
+config/version="ALPHA"
 run/main_scene="uid://cs6e2hbm3l31i"
 config/features=PackedStringArray("4.4", "C#", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+Globals="*res://Scripts/Globals.cs"
 
 [display]
 

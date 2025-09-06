@@ -1,0 +1,122 @@
+[gd_scene load_steps=4 format=3 uid="uid://cjtatjhlsi6sq"]
+
+[ext_resource type="Script" uid="uid://clmuwhwpuqdb3" path="res://Scripts/OutdatedVersion.cs" id="1_1ejpl"]
+[ext_resource type="FontFile" uid="uid://ce5orwahlvceo" path="res://Fonts/MainFont.ttf" id="1_ohb3x"]
+[ext_resource type="Script" uid="uid://d2ev2yqox5ahs" path="res://Scripts/SceneSwitcher.cs" id="2_4oqe8"]
+
+[node name="OutdatedVersion" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1ejpl")
+
+[node name="Center" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Header" type="Control" parent="Center"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="OutdatedVersionLabel" type="Label" parent="Center/Header"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -637.0
+offset_top = -328.0
+offset_right = 637.0
+offset_bottom = -110.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_ohb3x")
+theme_override_font_sizes/font_size = 191
+text = "Outdated Version"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SecondaryLabel" type="Label" parent="Center/Header"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -520.0
+offset_top = -141.0
+offset_right = 2081.0
+offset_bottom = 77.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.400001, 0.400001)
+theme_override_fonts/font = ExtResource("1_ohb3x")
+theme_override_font_sizes/font_size = 191
+text = "You may lack features and bug fixes!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Buttons" type="Control" parent="Center"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="UpdateButton" type="Button" parent="Center/Buttons"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -211.0
+offset_top = -20.0
+offset_right = 212.0
+offset_bottom = 122.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_ohb3x")
+theme_override_font_sizes/font_size = 96
+text = "Update"
+
+[node name="ContinueButton" type="Button" parent="Center/Buttons"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -211.0
+offset_top = 151.0
+offset_right = 212.0
+offset_bottom = 293.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_ohb3x")
+theme_override_font_sizes/font_size = 96
+text = "Continue"
+script = ExtResource("2_4oqe8")
+ScenePath = "res://Scenes/MainMenu.tscn"
