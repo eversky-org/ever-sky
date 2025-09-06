@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="Ever Sky"
+run/main_scene="uid://cs6e2hbm3l31i"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
