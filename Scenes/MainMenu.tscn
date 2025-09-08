@@ -1,8 +1,20 @@
-[gd_scene load_steps=5 format=3 uid="uid://cs6e2hbm3l31i"]
+[gd_scene load_steps=8 format=3 uid="uid://cs6e2hbm3l31i"]
 
 [ext_resource type="FontFile" uid="uid://ce5orwahlvceo" path="res://Fonts/MainFont.ttf" id="1_tt5f1"]
 [ext_resource type="Script" uid="uid://d2ev2yqox5ahs" path="res://Scripts/SceneSwitcher.cs" id="2_853f1"]
 [ext_resource type="Script" uid="uid://dur42qfco1ugo" path="res://Scripts/Version.cs" id="3_8saeu"]
+
+[sub_resource type="FontVariation" id="FontVariation_8saeu"]
+base_font = ExtResource("1_tt5f1")
+spacing_glyph = 15
+
+[sub_resource type="FontVariation" id="FontVariation_ghw46"]
+base_font = ExtResource("1_tt5f1")
+spacing_glyph = 15
+
+[sub_resource type="FontVariation" id="FontVariation_df05h"]
+base_font = ExtResource("1_tt5f1")
+spacing_glyph = 15
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_853f1"]
 bg_color = Color(0.051971, 0.051971, 0.0519709, 1)
@@ -29,21 +41,77 @@ offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Title" type="Label" parent="Center"]
+[node name="Title" type="Control" parent="Center"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -484.0
-offset_top = -469.0
-offset_right = 1238.0
-offset_bottom = 140.0
+offset_left = -20.0
+offset_top = -349.0
+offset_right = 20.0
+offset_bottom = -309.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Cyan" type="Label" parent="Center/Title"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -508.0
+offset_top = -156.0
+offset_right = 1319.0
+offset_bottom = 453.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.563065, 0.563065)
-theme_override_fonts/font = ExtResource("1_tt5f1")
+theme_override_colors/font_color = Color(0, 1, 1, 1)
+theme_override_fonts/font = SubResource("FontVariation_8saeu")
+theme_override_font_sizes/font_size = 536
+text = "Ever Sky"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Magenta" type="Label" parent="Center/Title"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -522.0
+offset_top = -156.0
+offset_right = 1305.0
+offset_bottom = 453.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.563065, 0.563065)
+theme_override_colors/font_color = Color(1, 0, 1, 1)
+theme_override_fonts/font = SubResource("FontVariation_ghw46")
+theme_override_font_sizes/font_size = 536
+text = "Ever Sky"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MainTitle" type="Label" parent="Center/Title"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -515.0
+offset_top = -156.0
+offset_right = 1312.0
+offset_bottom = 453.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.563065, 0.563065)
+theme_override_fonts/font = SubResource("FontVariation_df05h")
 theme_override_font_sizes/font_size = 536
 text = "Ever Sky"
 horizontal_alignment = 1
