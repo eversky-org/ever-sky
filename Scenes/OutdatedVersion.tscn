@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://cjtatjhlsi6sq"]
 
-[ext_resource type="Script" uid="uid://clmuwhwpuqdb3" path="res://Scripts/OutdatedVersion.cs" id="1_1ejpl"]
+[ext_resource type="Script" uid="uid://clmuwhwpuqdb3" path="res://Scripts/Menus/OutdatedVersion.cs" id="1_1ejpl"]
 [ext_resource type="FontFile" uid="uid://ce5orwahlvceo" path="res://Fonts/MainFont.ttf" id="1_ohb3x"]
-[ext_resource type="Script" uid="uid://d2ev2yqox5ahs" path="res://Scripts/SceneSwitcher.cs" id="2_4oqe8"]
+[ext_resource type="Script" uid="uid://d2ev2yqox5ahs" path="res://Scripts/Menus/SceneSwitcher.cs" id="2_4oqe8"]
 
 [node name="OutdatedVersion" type="Control"]
 layout_mode = 3

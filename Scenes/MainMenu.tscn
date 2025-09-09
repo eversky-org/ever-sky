@@ -1,8 +1,8 @@
 [gd_scene load_steps=8 format=3 uid="uid://cs6e2hbm3l31i"]
 
 [ext_resource type="FontFile" uid="uid://ce5orwahlvceo" path="res://Fonts/MainFont.ttf" id="1_tt5f1"]
-[ext_resource type="Script" uid="uid://d2ev2yqox5ahs" path="res://Scripts/SceneSwitcher.cs" id="2_853f1"]
-[ext_resource type="Script" uid="uid://dur42qfco1ugo" path="res://Scripts/Version.cs" id="3_8saeu"]
+[ext_resource type="Script" uid="uid://d2ev2yqox5ahs" path="res://Scripts/Menus/SceneSwitcher.cs" id="2_853f1"]
+[ext_resource type="Script" uid="uid://dur42qfco1ugo" path="res://Scripts/Menus/Version.cs" id="3_8saeu"]
 
 [sub_resource type="FontVariation" id="FontVariation_8saeu"]
 base_font = ExtResource("1_tt5f1")
