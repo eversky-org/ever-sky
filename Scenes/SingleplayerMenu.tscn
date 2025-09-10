@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://0a8rolal7r5j"]
+[gd_scene load_steps=3 format=3 uid="uid://0a8rolal7r5j"]
 
 [ext_resource type="FontFile" uid="uid://ce5orwahlvceo" path="res://Fonts/MainFont.ttf" id="1_8l0el"]
+[ext_resource type="Script" uid="uid://d2ev2yqox5ahs" path="res://Scripts/Menus/SceneSwitcher.cs" id="2_0ii7g"]
 
 [node name="SingleplayerMenu" type="Control"]
 layout_mode = 3
@@ -26,3 +27,5 @@ grow_vertical = 0
 theme_override_fonts/font = ExtResource("1_8l0el")
 theme_override_font_sizes/font_size = 136
 text = "New Save"
+script = ExtResource("2_0ii7g")
+ScenePath = "res://Scenes/NewSave.tscn"
