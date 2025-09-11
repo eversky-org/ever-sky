@@ -24,58 +24,7 @@ offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Normal" type="Button" parent="Center"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -472.0
-offset_top = -284.0
-offset_right = -21.0
-offset_bottom = -20.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_fonts/font = ExtResource("1_r1hwb")
-theme_override_font_sizes/font_size = 121
-text = "Normal"
-
-[node name="Creative" type="Button" parent="Center"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -472.0
-offset_top = 20.0
-offset_right = -21.0
-offset_bottom = 284.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_fonts/font = ExtResource("1_r1hwb")
-theme_override_font_sizes/font_size = 121
-text = "Creative"
-
-[node name="Custom" type="Button" parent="Center"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 20.0
-offset_top = -284.0
-offset_right = 471.0
-offset_bottom = 284.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_fonts/font = ExtResource("1_r1hwb")
-theme_override_font_sizes/font_size = 121
-text = "Custom"
-
-[node name="PickGamemodeLabel" type="Label" parent="Center"]
+[node name="NewSaveLabel" type="Label" parent="Center"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -83,13 +32,65 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -435.0
-offset_top = -438.0
+offset_top = -440.0
 offset_right = 435.0
-offset_bottom = -300.0
+offset_bottom = -302.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("1_r1hwb")
 theme_override_font_sizes/font_size = 121
-text = "Pick a game mode:"
+text = "New Save"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="SaveNameTextBox" type="LineEdit" parent="Center"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -630.0
+offset_top = -190.0
+offset_right = 631.0
+offset_bottom = -51.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_r1hwb")
+theme_override_font_sizes/font_size = 101
+placeholder_text = "Save Name"
+alignment = 1
+
+[node name="DifficultySettingsButton" type="Button" parent="Center"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -487.0
+offset_top = 177.0
+offset_right = 488.0
+offset_bottom = 323.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_r1hwb")
+theme_override_font_sizes/font_size = 121
+text = "Difficulty Settings"
+
+[node name="DoneButton" type="Button" parent="Center"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -487.0
+offset_top = 354.0
+offset_right = 488.0
+offset_bottom = 500.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_r1hwb")
+theme_override_font_sizes/font_size = 121
+text = "Done"
