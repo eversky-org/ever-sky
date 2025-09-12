@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://72wbiq27oedj"]
+[gd_scene load_steps=4 format=3 uid="uid://72wbiq27oedj"]
 
 [ext_resource type="FontFile" uid="uid://ce5orwahlvceo" path="res://Fonts/MainFont.ttf" id="1_r1hwb"]
 [ext_resource type="Script" uid="uid://c6risy5ykben" path="res://Scripts/NewSaveCreation.cs" id="2_17q41"]
+[ext_resource type="Script" uid="uid://cgqskmmf8npaq" path="res://Scripts/Menus/OpenDifficultySettings.cs" id="2_wt4jo"]
 
 [node name="NewSave" type="Control"]
 layout_mode = 3
@@ -78,6 +79,7 @@ grow_vertical = 2
 theme_override_fonts/font = ExtResource("1_r1hwb")
 theme_override_font_sizes/font_size = 121
 text = "Difficulty Settings"
+script = ExtResource("2_wt4jo")
 
 [node name="DoneButton" type="Button" parent="Center"]
 layout_mode = 1

@@ -1,0 +1,34 @@
+[gd_scene load_steps=3 format=3 uid="uid://pm6jokqt6m8c"]
+
+[ext_resource type="FontFile" uid="uid://ce5orwahlvceo" path="res://Fonts/MainFont.ttf" id="1_o2jqe"]
+[ext_resource type="Script" uid="uid://bubgb4w6kitoo" path="res://Scripts/Menus/DifficultySettingsBackButton.cs" id="2_v4j8h"]
+
+[node name="DifficultySettings" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.560784)
+
+[node name="BackButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 40.0
+offset_right = 515.0
+offset_bottom = 236.0
+theme_override_fonts/font = ExtResource("1_o2jqe")
+theme_override_font_sizes/font_size = 156
+text = "Back"
+script = ExtResource("2_v4j8h")
+
+[connection signal="button_up" from="BackButton" to="BackButton" method="_on_button_up"]
