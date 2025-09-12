@@ -30,7 +30,7 @@ public partial class NewSaveCreation : Button {
         Globals.SaveJson["playerposition"] = "1;0:0:1000";
         Globals.SaveJson["inventory"] = new Godot.Collections.Array<string>();
 
-        GD.Print(Json.Stringify(Globals.SaveJson));
-        // file.StoreString(Json.Stringify(Globals.SaveJson));
+        GD.Print("Creating save.json: " + Json.Stringify(Globals.SaveJson));
+        file.StoreString(Json.Stringify(Globals.SaveJson));
     }
 }
