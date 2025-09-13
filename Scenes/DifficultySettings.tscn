@@ -1,7 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://pm6jokqt6m8c"]
+[gd_scene load_steps=5 format=3 uid="uid://pm6jokqt6m8c"]
 
 [ext_resource type="FontFile" uid="uid://ce5orwahlvceo" path="res://Fonts/MainFont.ttf" id="1_o2jqe"]
 [ext_resource type="Script" uid="uid://bubgb4w6kitoo" path="res://Scripts/Menus/DifficultySettingsBackButton.cs" id="2_v4j8h"]
+[ext_resource type="Script" uid="uid://5ddci8w074wa" path="res://Scripts/Menus/DifficultySettingRow.cs" id="3_24jk5"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v4j8h"]
+bg_color = Color(0.0768358, 0.0768358, 0.0768358, 0.65098)
 
 [node name="DifficultySettings" type="Control"]
 layout_mode = 3
@@ -21,14 +25,174 @@ grow_vertical = 2
 color = Color(0, 0, 0, 0.560784)
 
 [node name="BackButton" type="Button" parent="."]
-layout_mode = 0
-offset_left = 40.0
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -512.0
 offset_top = 40.0
-offset_right = 515.0
+offset_right = -40.0
 offset_bottom = 236.0
+grow_horizontal = 0
 theme_override_fonts/font = ExtResource("1_o2jqe")
 theme_override_font_sizes/font_size = 156
 text = "Back"
 script = ExtResource("2_v4j8h")
+
+[node name="Options" type="ScrollContainer" parent="."]
+layout_mode = 1
+offset_right = 1171.0
+offset_bottom = 1080.0
+
+[node name="Control" type="Control" parent="Options"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Survival" type="Label" parent="Options/Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -315.5
+offset_top = -500.0
+offset_right = 315.5
+offset_bottom = -316.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_o2jqe")
+theme_override_font_sizes/font_size = 161
+text = "Survival"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="EnemyDamage" type="ColorRect" parent="Options/Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -521.5
+offset_top = -32.0
+offset_right = 521.5
+offset_bottom = 178.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.364706, 0.364706, 0.364706, 0.368627)
+script = ExtResource("3_24jk5")
+HoverText = "The multiplier for damage dealt by enemies such as monsters or dangerous plants"
+BackButtonPath = NodePath("../../../BackButton")
+
+[node name="Label" type="Label" parent="Options/Control/EnemyDamage"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 21.0
+offset_top = -41.0
+offset_right = 578.0
+offset_bottom = 41.0
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_o2jqe")
+theme_override_font_sizes/font_size = 71
+text = "Enemy Damage"
+vertical_alignment = 1
+
+[node name="Input" type="LineEdit" parent="Options/Control/EnemyDamage"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -443.0
+offset_top = -84.0
+offset_right = -20.0
+offset_bottom = 85.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_o2jqe")
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = SubResource("StyleBoxFlat_v4j8h")
+text = "1.0"
+placeholder_text = "Input"
+alignment = 1
+max_length = 5
+
+[node name="WeatherDamage" type="ColorRect" parent="Options/Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -521.5
+offset_top = -304.0
+offset_right = 521.5
+offset_bottom = -94.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.364706, 0.364706, 0.364706, 0.368627)
+script = ExtResource("3_24jk5")
+HoverText = "The multiplier for damage dealt by weather"
+BackButtonPath = NodePath("../../../BackButton")
+
+[node name="Label" type="Label" parent="Options/Control/WeatherDamage"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 21.0
+offset_top = -41.0
+offset_right = 578.0
+offset_bottom = 41.0
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_o2jqe")
+theme_override_font_sizes/font_size = 71
+text = "Weather Damage"
+vertical_alignment = 1
+
+[node name="Input" type="LineEdit" parent="Options/Control/WeatherDamage"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -443.0
+offset_top = -84.0
+offset_right = -20.0
+offset_bottom = 85.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_o2jqe")
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = SubResource("StyleBoxFlat_v4j8h")
+text = "1.0"
+placeholder_text = "Input"
+alignment = 1
+max_length = 5
+
+[node name="SettingDescription" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -680.0
+offset_top = -660.0
+offset_right = -40.0
+offset_bottom = -32.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("1_o2jqe")
+theme_override_font_sizes/font_size = 81
+text = "Hover over a setting
+to see its description!"
+vertical_alignment = 2
 
 [connection signal="button_up" from="BackButton" to="BackButton" method="_on_button_up"]
