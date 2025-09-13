@@ -2,7 +2,7 @@ using Godot;
 using System;
 
 public partial class DifficultySettingRow : ColorRect {
-    [Export] public string HoverText = "";
+    [Export(PropertyHint.MultilineText)] public string HoverText = "";
     [Export] public bool IsTextBoxSetting = true;
 
     public override void _Ready() {
@@ -26,6 +26,6 @@ public partial class DifficultySettingRow : ColorRect {
     }
 
     private void Hovered() {
-        GetNode<Label>("../../../SettingDescription");
+        GetNode<Label>("../../../SettingDescription").Text = HoverText;
     }
 }
