@@ -176,6 +176,60 @@ placeholder_text = "Input"
 alignment = 1
 max_length = 5
 
+[node name="PVP" type="ColorRect" parent="Options/Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -521.5
+offset_top = 248.0
+offset_right = 521.5
+offset_bottom = 458.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.364706, 0.364706, 0.364706, 0.368627)
+script = ExtResource("3_24jk5")
+HoverText = "The toggle for if players can
+damage you and your ship"
+
+[node name="Label" type="Label" parent="Options/Control/PVP"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 21.0
+offset_top = -41.0
+offset_right = 578.0
+offset_bottom = 41.0
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_o2jqe")
+theme_override_font_sizes/font_size = 71
+text = "PVP"
+vertical_alignment = 1
+
+[node name="Input" type="LineEdit" parent="Options/Control/PVP"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -443.0
+offset_top = -84.0
+offset_right = -20.0
+offset_bottom = 85.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_o2jqe")
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = SubResource("StyleBoxFlat_v4j8h")
+text = "1.0"
+placeholder_text = "Input"
+alignment = 1
+max_length = 5
+
 [node name="SettingDescription" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = 3
