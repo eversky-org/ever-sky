@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://pm6jokqt6m8c"]
+[gd_scene load_steps=8 format=3 uid="uid://pm6jokqt6m8c"]
 
 [ext_resource type="FontFile" uid="uid://ce5orwahlvceo" path="res://Fonts/MainFont.ttf" id="1_o2jqe"]
 [ext_resource type="Script" uid="uid://bubgb4w6kitoo" path="res://Scripts/Menus/DifficultySettingsBackButton.cs" id="2_v4j8h"]
@@ -6,6 +6,15 @@
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v4j8h"]
 bg_color = Color(0.0768358, 0.0768358, 0.0768358, 0.65098)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_24jk5"]
+bg_color = Color(0.0784314, 0.0784314, 0.0784314, 0.65098)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cx6h3"]
+bg_color = Color(0.0784314, 0.0784314, 0.0784314, 0.65098)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hefpp"]
+bg_color = Color(0.0784314, 0.0784314, 0.0784314, 0.65098)
 
 [node name="DifficultySettings" type="Control"]
 layout_mode = 3
@@ -191,8 +200,8 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.364706, 0.364706, 0.364706, 0.368627)
 script = ExtResource("3_24jk5")
-HoverText = "The toggle for if players can
-damage you and your ship"
+HoverText = "Selection for who can pvp with you"
+IsTextBoxSetting = false
 
 [node name="Label" type="Label" parent="Options/Control/PVP"]
 layout_mode = 1
@@ -209,26 +218,72 @@ theme_override_font_sizes/font_size = 71
 text = "PVP"
 vertical_alignment = 1
 
-[node name="Input" type="LineEdit" parent="Options/Control/PVP"]
+[node name="Buttons" type="Control" parent="Options/Control/PVP"]
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -443.0
-offset_top = -84.0
-offset_right = -20.0
-offset_bottom = 85.0
+offset_left = -789.0
+offset_top = -90.0
+offset_right = -15.0
+offset_bottom = 91.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="NoOne" type="Button" parent="Options/Control/PVP/Buttons"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -808.0
+offset_top = -90.5
+offset_right = -550.0
+offset_bottom = 90.5
 grow_horizontal = 0
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("1_o2jqe")
-theme_override_font_sizes/font_size = 100
-theme_override_styles/normal = SubResource("StyleBoxFlat_v4j8h")
-text = "1.0"
-placeholder_text = "Input"
-alignment = 1
-max_length = 5
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_24jk5")
+text = "No One"
+
+[node name="Group" type="Button" parent="Options/Control/PVP/Buttons"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -533.0
+offset_top = -90.5
+offset_right = -275.0
+offset_bottom = 90.5
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_o2jqe")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_cx6h3")
+text = "Group"
+
+[node name="Anyone" type="Button" parent="Options/Control/PVP/Buttons"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -258.0
+offset_top = -90.5
+offset_bottom = 90.5
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_o2jqe")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_hefpp")
+text = "Anyone"
 
 [node name="SettingDescription" type="Label" parent="."]
 layout_mode = 1
