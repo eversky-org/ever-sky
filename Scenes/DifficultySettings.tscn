@@ -146,8 +146,9 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.364706, 0.364706, 0.364706, 0.368627)
 script = ExtResource("3_24jk5")
-HoverText = "The multiplier for damage dealt by enemies
-such as monsters or dangerous plants"
+HoverText = "The multiplier for damage
+dealt by enemies such as
+monsters or dangerous plants"
 
 [node name="Label" type="Label" parent="Options/Control/EnemyDamage"]
 layout_mode = 1
