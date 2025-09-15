@@ -53,49 +53,32 @@ layout_mode = 1
 offset_right = 1171.0
 offset_bottom = 1080.0
 
-[node name="Control" type="Control" parent="Options"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Options"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+theme_override_constants/separation = 50
 
-[node name="Survival" type="Label" parent="Options/Control"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -315.5
-offset_top = -500.0
-offset_right = 315.5
-offset_bottom = -316.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="Control" type="Control" parent="Options/VBoxContainer"]
+layout_mode = 2
+
+[node name="Survival" type="Label" parent="Options/VBoxContainer"]
+layout_mode = 2
 theme_override_fonts/font = ExtResource("1_o2jqe")
 theme_override_font_sizes/font_size = 161
 text = "Survival"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="WeatherDamage" type="ColorRect" parent="Options/Control"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -521.5
-offset_top = -304.0
-offset_right = 521.5
-offset_bottom = -94.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="WeatherDamage" type="ColorRect" parent="Options/VBoxContainer"]
+custom_minimum_size = Vector2(0, 215)
+layout_mode = 2
 color = Color(0.364706, 0.364706, 0.364706, 0.368627)
 script = ExtResource("3_24jk5")
 HoverText = "The multiplier for damage
 dealt by planet weather"
 
-[node name="Label" type="Label" parent="Options/Control/WeatherDamage"]
+[node name="Label" type="Label" parent="Options/VBoxContainer/WeatherDamage"]
 layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
@@ -110,7 +93,7 @@ theme_override_font_sizes/font_size = 71
 text = "Weather Damage"
 vertical_alignment = 1
 
-[node name="Input" type="LineEdit" parent="Options/Control/WeatherDamage"]
+[node name="Input" type="LineEdit" parent="Options/VBoxContainer/WeatherDamage"]
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
@@ -131,26 +114,16 @@ placeholder_text = "Input"
 alignment = 1
 max_length = 5
 
-[node name="EnemyDamage" type="ColorRect" parent="Options/Control"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -521.5
-offset_top = -32.0
-offset_right = 521.5
-offset_bottom = 178.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="EnemyDamage" type="ColorRect" parent="Options/VBoxContainer"]
+custom_minimum_size = Vector2(0, 215)
+layout_mode = 2
 color = Color(0.364706, 0.364706, 0.364706, 0.368627)
 script = ExtResource("3_24jk5")
 HoverText = "The multiplier for damage
 dealt by enemies such as
 monsters or dangerous plants"
 
-[node name="Label" type="Label" parent="Options/Control/EnemyDamage"]
+[node name="Label" type="Label" parent="Options/VBoxContainer/EnemyDamage"]
 layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
@@ -165,7 +138,7 @@ theme_override_font_sizes/font_size = 71
 text = "Enemy Damage"
 vertical_alignment = 1
 
-[node name="Input" type="LineEdit" parent="Options/Control/EnemyDamage"]
+[node name="Input" type="LineEdit" parent="Options/VBoxContainer/EnemyDamage"]
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
@@ -186,25 +159,23 @@ placeholder_text = "Input"
 alignment = 1
 max_length = 5
 
-[node name="PVP" type="ColorRect" parent="Options/Control"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -521.5
-offset_top = 248.0
-offset_right = 521.5
-offset_bottom = 458.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="Multiplayer" type="Label" parent="Options/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_o2jqe")
+theme_override_font_sizes/font_size = 161
+text = "Multiplayer"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PVP" type="ColorRect" parent="Options/VBoxContainer"]
+custom_minimum_size = Vector2(0, 215)
+layout_mode = 2
 color = Color(0.364706, 0.364706, 0.364706, 0.368627)
 script = ExtResource("3_24jk5")
 HoverText = "Selection for who can pvp with you"
 IsTextBoxSetting = false
 
-[node name="Label" type="Label" parent="Options/Control/PVP"]
+[node name="Label" type="Label" parent="Options/VBoxContainer/PVP"]
 layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
@@ -219,7 +190,7 @@ theme_override_font_sizes/font_size = 71
 text = "PVP"
 vertical_alignment = 1
 
-[node name="Buttons" type="Control" parent="Options/Control/PVP"]
+[node name="Buttons" type="Control" parent="Options/VBoxContainer/PVP"]
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
@@ -233,7 +204,7 @@ offset_bottom = 91.0
 grow_horizontal = 0
 grow_vertical = 2
 
-[node name="NoOne" type="Button" parent="Options/Control/PVP/Buttons"]
+[node name="NoOne" type="Button" parent="Options/VBoxContainer/PVP/Buttons"]
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
@@ -251,7 +222,7 @@ theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = SubResource("StyleBoxFlat_24jk5")
 text = "No One"
 
-[node name="Group" type="Button" parent="Options/Control/PVP/Buttons"]
+[node name="Group" type="Button" parent="Options/VBoxContainer/PVP/Buttons"]
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
@@ -269,7 +240,7 @@ theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = SubResource("StyleBoxFlat_cx6h3")
 text = "Group"
 
-[node name="Anyone" type="Button" parent="Options/Control/PVP/Buttons"]
+[node name="Anyone" type="Button" parent="Options/VBoxContainer/PVP/Buttons"]
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
