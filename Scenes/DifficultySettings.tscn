@@ -49,6 +49,7 @@ text = "Back"
 script = ExtResource("2_v4j8h")
 
 [node name="Options" type="ScrollContainer" parent="."]
+clip_contents = false
 layout_mode = 1
 offset_right = 1171.0
 offset_bottom = 1080.0
@@ -250,6 +251,98 @@ anchor_bottom = 0.5
 offset_left = -258.0
 offset_top = -90.5
 offset_bottom = 90.5
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_o2jqe")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_hefpp")
+text = "Anyone"
+
+[node name="BaseBuilding" type="ColorRect" parent="Options/VBoxContainer"]
+custom_minimum_size = Vector2(0, 215)
+layout_mode = 2
+color = Color(0.364706, 0.364706, 0.364706, 0.368627)
+script = ExtResource("3_24jk5")
+HoverText = "Setting for who can break and
+place blocks at your bases"
+IsTextBoxSetting = false
+
+[node name="Label" type="Label" parent="Options/VBoxContainer/BaseBuilding"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 21.0
+offset_top = -41.0
+offset_right = 578.0
+offset_bottom = 41.0
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_o2jqe")
+theme_override_font_sizes/font_size = 71
+text = "Base Building"
+vertical_alignment = 1
+
+[node name="Buttons" type="Control" parent="Options/VBoxContainer/BaseBuilding"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -789.0
+offset_top = -90.0
+offset_right = -15.0
+offset_bottom = 91.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="NoOne" type="Button" parent="Options/VBoxContainer/BaseBuilding/Buttons"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -731.0
+offset_top = -90.0
+offset_right = -501.0
+offset_bottom = 91.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_o2jqe")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_24jk5")
+text = "No One"
+
+[node name="Group" type="Button" parent="Options/VBoxContainer/BaseBuilding/Buttons"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -481.0
+offset_top = -90.0
+offset_right = -251.0
+offset_bottom = 91.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_o2jqe")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_cx6h3")
+text = "Group"
+
+[node name="Anyone" type="Button" parent="Options/VBoxContainer/BaseBuilding/Buttons"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -231.0
+offset_top = -90.0
+offset_right = -1.0
+offset_bottom = 91.0
 grow_horizontal = 0
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("1_o2jqe")
