@@ -174,7 +174,8 @@ layout_mode = 2
 color = Color(0.364706, 0.364706, 0.364706, 0.368627)
 script = ExtResource("3_24jk5")
 HoverText = "Selection for who can pvp with you"
-IsTextBoxSetting = false
+SettingName = "pvp"
+SettingType = "NoOne Group Anyone"
 
 [node name="Label" type="Label" parent="Options/VBoxContainer/PVP"]
 layout_mode = 1
@@ -265,7 +266,8 @@ color = Color(0.364706, 0.364706, 0.364706, 0.368627)
 script = ExtResource("3_24jk5")
 HoverText = "Setting for who can break and
 place blocks at your bases"
-IsTextBoxSetting = false
+SettingName = "base-building"
+SettingType = "NoOne Group Anyone"
 
 [node name="Label" type="Label" parent="Options/VBoxContainer/BaseBuilding"]
 layout_mode = 1
