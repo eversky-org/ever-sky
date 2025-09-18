@@ -78,6 +78,7 @@ color = Color(0.364706, 0.364706, 0.364706, 0.368627)
 script = ExtResource("3_24jk5")
 HoverText = "The multiplier for damage
 dealt by planet weather"
+SettingName = "weather-damage"
 
 [node name="Label" type="Label" parent="Options/VBoxContainer/WeatherDamage"]
 layout_mode = 1
@@ -123,6 +124,7 @@ script = ExtResource("3_24jk5")
 HoverText = "The multiplier for damage
 dealt by enemies such as
 monsters or dangerous plants"
+SettingName = "enemy-damage"
 
 [node name="Label" type="Label" parent="Options/VBoxContainer/EnemyDamage"]
 layout_mode = 1

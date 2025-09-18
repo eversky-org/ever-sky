@@ -24,6 +24,8 @@ public partial class DifficultySettingRow : ColorRect {
             if (Input.Text.EndsWith('.') || Input.Text.StartsWith('.')) {
                 Input.Text = "1.0";
             }
+
+            Globals.DifficultySettings[SettingName] = float.Parse(Input.Text);
         } else if (SettingType == "NoOne Group Anyone") {
             Button NoOne = GetNode<Button>("Buttons/NoOne");
             Button Group = GetNode<Button>("Buttons/Group");
