@@ -32,7 +32,8 @@ public partial class NewSaveCreation : Button {
                 ["longitude"] = 0,
                 ["altitude"] = 1000
             },
-            ["inventory"] = new Godot.Collections.Array<string>()
+            ["inventory"] = new Godot.Collections.Array<string>(),
+            ["difficultysettings"] = Globals.DifficultySettings
         };
 
         GD.Print("Creating save.json: " + Json.Stringify(Globals.SaveJson));

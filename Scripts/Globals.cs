@@ -6,6 +6,13 @@ public partial class Globals : Node {
     public static string AccessLevel = "";
     public static bool VersionChecked = false;
 
+    public static Godot.Collections.Dictionary<string, Variant> DifficultySettings = new() {
+        ["weather-damage"] = 1f,
+        ["enemy-damage"] = 1f,
+        ["pvp"] = "no-one",
+        ["base-building"] = "no-one",
+    };
+
     public static Godot.Collections.Dictionary<string, Variant> SaveJson = [];
 
     public static void CreateSavesDir() {
