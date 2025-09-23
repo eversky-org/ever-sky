@@ -21,7 +21,7 @@ public partial class NewSaveCreation : Button {
         GD.Print("Creating Save: " + SaveFolder);
         DirAccess.MakeDirAbsolute(ProjectSettings.GlobalizePath(SaveFolder));
 
-        using var file = FileAccess.Open(SaveFolder + "/" + "save.json", FileAccess.ModeFlags.Write);
+        using var save_json = FileAccess.Open(SaveFolder + "/" + "save.json", FileAccess.ModeFlags.Write);
 
         Globals.SaveJson = new Godot.Collections.Dictionary<string, Variant> {
             ["savename"] = SaveName,
@@ -37,6 +37,24 @@ public partial class NewSaveCreation : Button {
         };
 
         GD.Print("Creating save.json: " + Json.Stringify(Globals.SaveJson));
-        file.StoreString(Json.Stringify(Globals.SaveJson));
+        save_json.StoreString(Json.Stringify(Globals.SaveJson));
+
+        if (!FileAccess.FileExists("user://save_list.txt")) {
+            FileAccess.Open("user://save_list.txt", FileAccess.ModeFlags.Write);
+        }
+        using var SaveList = FileAccess.Open("user://save_list.txt", FileAccess.ModeFlags.ReadWrite);
+        string SaveListContents = SaveList.GetAsText();
+
+        // SaveList.SeekEnd();
+
+        if (SaveListContents == "") {
+            SaveListContents += SaveFolderName;
+        } else {
+            SaveListContents += ":" + SaveFolderName;
+        }
+
+        GD.Print("Updating Save List: " + SaveListContents);
+
+        SaveList.StoreString(SaveListContents);
     }
 }
