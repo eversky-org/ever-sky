@@ -42,6 +42,7 @@ public partial class NewSaveCreation : Button {
         if (!FileAccess.FileExists("user://save_list.txt")) {
             FileAccess.Open("user://save_list.txt", FileAccess.ModeFlags.Write);
         }
+
         using var SaveList = FileAccess.Open("user://save_list.txt", FileAccess.ModeFlags.ReadWrite);
         string SaveListContents = SaveList.GetAsText();
 
