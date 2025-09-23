@@ -46,8 +46,6 @@ public partial class NewSaveCreation : Button {
         using var SaveList = FileAccess.Open("user://save_list.txt", FileAccess.ModeFlags.ReadWrite);
         string SaveListContents = SaveList.GetAsText();
 
-        // SaveList.SeekEnd();
-
         if (SaveListContents == "") {
             SaveListContents += SaveFolderName;
         } else {
